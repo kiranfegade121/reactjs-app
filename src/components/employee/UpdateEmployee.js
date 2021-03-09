@@ -9,7 +9,7 @@ class UpdateEmployee extends Component {
   componentDidMount() {
     const id = this.props.match.params.id;
     axios
-      .get("http://localhost:8080/api/v1/employees/" + id)
+      .get("/api/v1/employees/" + id)
       .then(response => {
         this.setState({ employee: response.data });
       })
