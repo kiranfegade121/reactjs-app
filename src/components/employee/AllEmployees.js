@@ -8,7 +8,7 @@ class AllEmployees extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8080/api/v1/employees")
+      .get("/api/v1/employees")
       .then(response => {
         this.setState({ employees: response.data });
       })
@@ -19,7 +19,7 @@ class AllEmployees extends Component {
 
   handleDelete = id => {
     axios
-      .delete("http://localhost:8080/api/v1/employees/" + id)
+      .delete("/api/v1/employees/" + id)
       .then(response => {
         this.props.history.push("/refresh");
       })
