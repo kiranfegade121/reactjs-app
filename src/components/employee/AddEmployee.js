@@ -34,7 +34,7 @@ class AddEmployee extends Component {
     // console.log(this.state);
     this.setState({ isFormFilled: false });
     axios
-      .post("http://localhost:8080/api/v1/employees", this.state.employee)
+      .post("/api/v1/employees", this.state.employee)
       .then(response => {
         // console.log(response);
         this.props.history.push("/employees");
